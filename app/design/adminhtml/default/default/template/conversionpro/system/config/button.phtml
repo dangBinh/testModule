@@ -1,0 +1,17 @@
+<script type="text/javascript">
+    //<![CDATA[
+    function conversionproReset() {
+        new Ajax.Request('<?php echo $this->getAjaxCheckUrl() ?>', {
+            method:     'get',
+            onSuccess: function(transport){
+ 
+            if (transport.responseText){
+                alert('Conversion Pro Cache Cleaned.')
+            }
+            }
+        });
+    }
+    //]]>
+</script>
+ 
+<?php echo $this->getButtonHtml() ?>

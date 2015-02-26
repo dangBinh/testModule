@@ -1,0 +1,17 @@
+<script type="text/javascript">
+    //<![CDATA[
+    function conversionproExport() {
+        new Ajax.Request('<?php echo $this->getAjaxCheckUrl() ?>', {
+            method:     'get',
+            onSuccess: function(transport){
+ 
+            if (transport.responseText){
+                alert('Conversion Pro Settings Exported.')
+            }
+            }
+        });
+    }
+    //]]>
+</script>
+ 
+<?php echo $this->getButtonHtml() ?>
